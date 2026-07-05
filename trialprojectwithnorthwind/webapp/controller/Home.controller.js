@@ -11,13 +11,13 @@ sap.ui.define([
     return Controller.extend("com.trial.trialprojectwithnorthwind.controller.Home", {
         onInit() {
             // set data model on view
-            const oData = {
+            const oObject = {
                 recipient: {
                     name: "World"
                 }
             };
-            const oModel = new JSONModel(oData);
-            this.getView().setModel(oModel);
+            const oJsonModel = new JSONModel(oObject);
+            this.getView().setModel(oJsonModel);
         },
 
         onShowHello() {
