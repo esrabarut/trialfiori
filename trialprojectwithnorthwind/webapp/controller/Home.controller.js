@@ -13,6 +13,14 @@ sap.ui.define([
         //View oluşmadan önce tetiklenen methoddur. 
        onInit: function () {
 
+        var oJsonData = {
+            recipient: {
+                name: "World"
+            }
+        };
+        var oHomeModel = new JSONModel(oJsonData);
+        this.getView().setModel(oHomeModel , "homeModel");
+
        },
         //View görüntüsü oluşmadan önce tetiklenen methoddur. 
        onBeforeRendering: function () {
@@ -31,7 +39,7 @@ sap.ui.define([
 
             // read msg from i18n model
             const oBundle = this.getView().getModel("i18n").getResourceBundle();
-            const sRecipient = this.getView().getModel().getProperty("/recipient/name");
+            const sRecipient = this.getView().getModel("homeModel").getProperty("/recipient/name");
             const sMsg = oBundle.getText("helloMsg", [sRecipient]);
             // show message
             MessageToast.show(sMsg);

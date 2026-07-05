@@ -19,8 +19,8 @@
                                     press=".onShowHello"
                                 />
                                 <Input
-                                    value="{/recipient/name}"
-                                    description="Hello {/recipient/name}"
+                                    value="{homeModel>/recipient/name}"
+                                    description="Hello {homeModel>/recipient/name}"
                                     valueLiveUpdate="true"
                                     width="60%"
                                 />

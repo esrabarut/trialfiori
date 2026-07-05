@@ -11,10 +11,17 @@ sap.ui.define([
 
         //View oluşmadan önce tetiklenen methoddur. 
         onInit: function () {
-            
+
             // Router'a bağlan: "main" route'u manifest'te tanımlı olmalı
             var oRouter = this.getOwnerComponent().getRouter();
             oRouter.getRoute("main").attachPatternMatched(this._onRouteMatched, this);
+
+            var oJsonData = {
+
+            };
+            var oMainModel = new JSONModel(oJsonData);
+            this.getView().setModel(oMainModel, "mainModel");
+
 
         },
         _onRouteMatched: function (oEvent) {
