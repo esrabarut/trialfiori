@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="com.trial.trialprojectwithnorthwind.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Shell>
+        <App>
+            <pages>
+                <Page title="MAINPAGE">
+                    <content>
+                        <Panel
+                            headerText="MAINHEADER"
+                            class="sapUiResponsiveMargin"
+                            width="auto"
+                        >
+                            <content>
+                                <Label text="mainLabel" />
+                                
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

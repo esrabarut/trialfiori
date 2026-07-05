@@ -1,7 +1,7 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "com/trial/trialprojectwithnorthwind/model/models"
-], (UIComponent, models) => {
+], function (UIComponent, models) {
     "use strict";
 
     return UIComponent.extend("com.trial.trialprojectwithnorthwind.Component", {
