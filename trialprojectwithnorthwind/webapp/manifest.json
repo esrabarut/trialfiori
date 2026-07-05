@@ -90,24 +90,35 @@
       },
       "routes": [
         {
-          "name": "Main",
+          "name": "home",
           "pattern": "",
           "target": [
-            "Main"
+            "home"
+          ]
+        },
+        {
+          "name": "main",
+          "pattern": "/main",
+          "target": [ 
+            "main"
           ]
         }
       ],
       "targets": {
-        "Main": {
+        "home": {
+          "id": "Home",
+          "name": "Home"
+        },
+        "main": {
           "id": "Main",
           "name": "Main"
         }
       }
     },
     "rootView": {
-      "viewName": "com.trial.trialprojectwithnorthwind.view.Main",
+      "viewName": "com.trial.trialprojectwithnorthwind.view.App",
       "type": "XML",
-      "id": "main",
+      "id": "App",
       "async": true
     }
   }

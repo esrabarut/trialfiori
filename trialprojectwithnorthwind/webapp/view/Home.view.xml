@@ -24,6 +24,11 @@
                                     valueLiveUpdate="true"
                                     width="60%"
                                 />
+
+                                <Button
+                                    text="NAVIGATE"
+                                    press=".onNavigate"
+                                />
                             </content>
                         </Panel>
                     </content>
