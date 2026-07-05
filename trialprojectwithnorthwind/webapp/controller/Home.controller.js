@@ -18,10 +18,26 @@ sap.ui.define([
             };
             const oJsonModel = new JSONModel(oObject);
             this.getView().setModel(oJsonModel);
+
+
+            // set i18n model on view
+            const i18nModel = new ResourceModel({
+                bundleName: "com.trial.trialprojectwithnorthwind.i18n.i18n"
+            });
+            this.getView().setModel(i18nModel, "i18n");
+
         },
 
         onShowHello() {
-            MessageToast.show("Hello World");
+
+            // read msg from i18n model
+            const oBundle = this.getView().getModel("i18n").getResourceBundle();
+            const sRecipient = this.getView().getModel().getProperty("/recipient/name");
+            const sMsg = oBundle.getText("helloMsg", [sRecipient]);
+
+            // show message
+            MessageToast.show(sMsg);
+
         }
 
     });
