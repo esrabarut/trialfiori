@@ -1,7 +1,7 @@
 <mvc:View
-    controllerName="com.trial.trialprojectwithnorthwind.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    controllerName="com.trial.trialprojectwithnorthwind.controller.Main"
 >
     <Shell>
         <App>
@@ -15,8 +15,89 @@
                         >
                             <content>
                                 <Label text="mainLabel" />
-                                
                             </content>
+                        </Panel>
+
+                        <Panel
+                            xmlns="sap.m"
+                            width="auto"
+                            id="panelTable"
+                            expandAnimation="false"
+                            expanded="true"
+                            headerText="Panel Header Text"
+                            class="sapUiResponsiveMargin"
+                        >
+                            <Text
+                                text="Panel Content"
+                                id="text0"
+                                textDirection="LTR"
+                            />
+                            <Table
+                                noDataText="Drop column list items here and columns in the area above"
+                                id="tableNorth"
+                                headerText="Table Header Text"
+                                footerText="Footer Text"
+                                alternateRowColors="true"
+                                growing="true"
+                                growingScrollToLoad="true"
+                                growingThreshold="5"
+                                mode="MultiSelect"
+                                popinLayout="GridSmall"
+                                items="{mainModel>/Products}" 
+                            >
+                                <!-- <items> -->
+                                    <ColumnListItem
+                                        type="Active"
+                                        id="item0"
+                                        vAlign="Middle"
+                                    >
+                                        <cells>
+                                            <Text
+                                                text="Row 1 Cell 1"
+                                                id="text1"
+                                                textDirection="LTR"
+                                            />
+                                            <Text
+                                                text="Row 1 Cell 2"
+                                                id="text2"
+                                            />
+                                            <Text
+                                                text="Row 1 Cell 3"
+                                                id="text3"
+                                            />
+                                        </cells>
+                                    </ColumnListItem>
+                                <!-- </items> -->
+                                <columns>
+                                    <Column id="column0">
+                                        <header>
+                                            <Label
+                                                text="Header 1"
+                                                id="label1"
+                                                vAlign="Middle"
+                                            />
+                                        </header>
+                                    </Column>
+                                    <Column id="column1">
+                                        <header>
+                                            <Label
+                                                text="Header 2"
+                                                id="label2"
+                                                vAlign="Middle"
+                                            />
+                                        </header>
+                                    </Column>
+                                    <Column id="column2">
+                                        <header>
+                                            <Label
+                                                text="Header 3"
+                                                id="label3"
+                                                vAlign="Middle"
+                                            />
+                                        </header>
+                                    </Column>
+                                </columns>
+                            </Table>
                         </Panel>
                     </content>
                 </Page>

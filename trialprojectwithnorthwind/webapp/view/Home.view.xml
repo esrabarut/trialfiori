@@ -1,7 +1,7 @@
 <mvc:View
-    controllerName="com.trial.trialprojectwithnorthwind.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    controllerName="com.trial.trialprojectwithnorthwind.controller.Home"
 >
     <Shell>
         <App>
@@ -9,26 +9,71 @@
                 <Page title="{i18n>homePageTitle}">
                     <content>
                         <Panel
-                            headerText="{i18n>helloPanelTitle}"
-                            class="sapUiResponsiveMargin"
+                            xmlns="sap.m"
                             width="auto"
+                            expandable="true"
+                            expanded="true"
+                            id="panel1"
+                            class="sapUiResponsiveMargin"
                         >
+                            <headerToolbar>
+                                <Toolbar id="toolbar2">
+                                    <Title text="Header" />
+                                    <ToolbarSpacer />
+                                    <Button icon="sap-icon://settings" />
+                                </Toolbar>
+                            </headerToolbar>
                             <content>
-                                <Button
-                                    text="{i18n>showHelloButtonText}"
-                                    press=".onShowHello"
+                                <Text
+                                    text="Panel Content"
+                                    id="text4"
                                 />
-                                <Input
-                                    value="{homeModel>/recipient/name}"
-                                    description="Hello {homeModel>/recipient/name}"
-                                    valueLiveUpdate="true"
-                                    width="60%"
-                                />
-
-                                <Button
-                                    text="NAVIGATE"
-                                    press=".onNavigate"
-                                />
+                                <VBox
+                                    width="100%"
+                                    direction="Column"
+                                    id="vbox1"
+                                >
+                                    <items>
+                                        <Panel
+                                            xmlns="sap.m"
+                                            headerText="{i18n>helloPanelTitle}"
+                                            class="sapUiResponsiveMargin"
+                                            width="auto"
+                                        >
+                                            <content>
+                                                <VBox
+                                                    width="100%"
+                                                    direction="Column"
+                                                    id="vbox2"
+                                                    class="sapUiResponsiveMargin"
+                                                >
+                                                    <items>
+                                                        <Input
+                                                            xmlns="sap.m"
+                                                            value="{homeModel>/recipient/name}"
+                                                            description="Hello {homeModel>/recipient/name}"
+                                                            valueLiveUpdate="true"
+                                                            width="60%"
+                                                            textAlign="Center"
+                                                            textDirection="LTR"
+                                                        />
+                                                        <Button
+                                                            xmlns="sap.m"
+                                                            text="{i18n>showHelloButtonText}"
+                                                            press=".onShowHello"
+                                                        />
+                                                        <Button
+                                                            xmlns="sap.m"
+                                                            text="NAVIGATE"
+                                                            press=".onNavigate"
+                                                            textDirection="LTR"
+                                                        />
+                                                    </items>
+                                                </VBox>
+                                            </content>
+                                        </Panel>
+                                    </items>
+                                </VBox>
                             </content>
                         </Panel>
                     </content>
